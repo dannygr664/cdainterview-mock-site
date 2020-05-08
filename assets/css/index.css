@@ -75,6 +75,7 @@ img {
 @media screen and (min-width: 40rem) {
   .header .logo {
     margin-bottom: 0;
+    max-width: 20%;
   }
   .header {
     flex-direction: row;
