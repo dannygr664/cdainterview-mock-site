@@ -27,7 +27,7 @@
   <div class="page">
     <header class="header">
       <!-- In this link we call `$site->url()` to create a link back to the homepage -->
-      <a class="logo" href="<?= $site->url() ?>"><?= $site->title() ?></a>
+      <a class="logo" href="<?= $site->url() ?>"><?= $site->image("bemo-logo2.png") ?></a>
 
       <nav id="menu" class="menu">
         <?php 
