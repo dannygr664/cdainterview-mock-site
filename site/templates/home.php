@@ -11,7 +11,9 @@
 <?php snippet('header') ?>
 
 <main>
-  <?php snippet('intro') ?>
+<header class="intro">
+  <h1><?= $page->heading() ?></h1>
+</header> 
 </main>
 
 <?php snippet('footer') ?>
