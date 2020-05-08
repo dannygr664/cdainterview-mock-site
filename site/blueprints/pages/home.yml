@@ -4,17 +4,36 @@ title: Home
 # Each page can have an icon that is shown in page listings when no preview image is available.
 icon: 🏠
 
-# Page options allow you to control how users can interact with the page.
-# Here we prevent changing the page status (the home page cannot be renamed or deleted by default)
-# More about page options: https://getkirby.com/docs/reference/panel/blueprints/page#options
-options:
-  changeStatus: false
+# Page presets are a quick way to set up a standard page layout
+# More about page presets:
+# - https://getkirby.com/docs/guide/blueprints/presets and
+# - https://getkirby.com/docs/reference/panel/presets/page
+preset: page
 
-# Here we define an info section
-sections:
-  info:
-    headline: Info
-    type: info
-    text: Information goes here
+# Custom descriptions of page statuses depending on use case
+# More about page statuses: https://getkirby.com/docs/reference/panel/blueprints/page#statuses
+status:
+  draft: true
+  unlisted:
+    label: Hidden Page
+    text: The page is not listed in the main menu
+  listed:
+    label: Menu Page
+    text: The page is listed in the main menu
 
+# Disable sub-pages
+pages: false
 
+# A page preset can have a freely defined set of fields
+# List of all available field types: https://getkirby.com/docs/reference/panel/fields
+fields:
+  heading:
+    label: Heading
+    type: text
+  cover:
+    label: Cover Photo
+    type: files
+    multiple: false
+  text:
+    type: textarea
+    size: huge
