@@ -11,8 +11,15 @@
 <?php snippet('header') ?>
 
 <main>
-<header class="intro">
-  <h1><?= $page->heading() ?></h1>
+<header class="intro"
+  <?php 
+  // we make sure to check if the file exists to prevent errors
+  if ($cover = $page->cover()): ?>
+    style='background-image: url(<?= $page->cover()->toFile()->url() ?>)'
+  <?php endif ?>
+>
+  <!-- The `or()` method is great to provide a fallback value if a field is empty -->
+  <h1><?= $page->heading()->or($page->title()) ?></h1>
 </header> 
 </main>
 
