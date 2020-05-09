@@ -23,6 +23,8 @@ a {
   text-decoration: none;
 }
 
+
+
 strong, b {
   font-weight: 500;
 }
@@ -142,11 +144,16 @@ main {
 .text a {
   position: relative;
   white-space: nowrap;
-  font-weight: 500;
   z-index: 1;
   display: inline-block;
-  border-bottom: 2px solid #000;
+  color: #FF772C;
 }
+
+.text a:hover {
+  color: #878787;
+  text-decoration: none;
+}
+
 .text figure {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
