@@ -13,6 +13,10 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <?php
+  if ($page->noindex()->isTrue()): ?>
+    <meta name="robots" content="noindex">
+  <?php endif ?>
 
   <!-- The title tag we show the title of the current page -->
   <title><?= $page->title() ?></title>

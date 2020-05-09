@@ -23,6 +23,10 @@ fields:
     label: Cover Photo
     type: files
     multiple: false
+  noindex:
+    label: Toggle
+    type: toggle
+    text: Turn on no-index for this page?
   email:
     label: Email
     type: email

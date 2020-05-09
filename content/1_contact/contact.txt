@@ -12,6 +12,10 @@ Cover:
 
 ----
 
+Noindex: true
+
+----
+
 Email: info@bemoacademicconsulting.com
 
 ----
