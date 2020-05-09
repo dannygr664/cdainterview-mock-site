@@ -21,6 +21,10 @@
   <!-- The `or()` method is great to provide a fallback value if a field is empty -->
   <h1><?= $page->heading()->or($page->title()) ?></h1>
 </header> 
+
+<div class="text">
+  <?= $page->text()->kt() ?>
+</div>
 </main>
 
 <?php snippet('footer') ?>
