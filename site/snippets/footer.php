@@ -11,15 +11,15 @@
   </div>
 
   <footer class="footer">
-    <a href="<?= url() ?>">&copy; <?= date('Y') ?> / <?= $site->title() ?></a>
-
-    <?php if ($about = page('contact')): ?>
+    <p>&copy; 2013-2016 <?= $site->author() ?> All rights reserved.
+    <a href="http://www.cdainterview.com/disclaimer-privacy-policy.html">Disclaimer & Privacy Policy</a>
+    <a href="mailto:info@bemoacademicconsulting.com">Contact Us</a>
+    </p>
     <nav class="social">
-      <?php foreach ($about->social()->toStructure() as $social): ?>
+      <?php foreach ($site->social()->toStructure() as $social): ?>
       <a href="<?= $social->url() ?>"><?= $social->platform() ?></a>
       <?php endforeach ?>
     </nav>
-    <?php endif ?>
   </footer>
 
 </body>

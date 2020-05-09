@@ -3,6 +3,25 @@
 title: Site
 
 sections:
+  site-info:
+    type: fields
+    fields:
+      author:
+        label: Author
+        type: text
+      social:
+        label: Socials
+        type: structure
+        fields:
+          platform:
+            label: Platform
+            type: text
+            width: 1/2
+          url:
+            label: URL
+            type: url
+            width: 1/2
+
   # The `pages` pages section shows other main pages of the site
   # Using the `templates` option, we limit which types of pages are shown
   # Using the `create` option, we limit the type of page that can be created when a new page is created
