@@ -146,7 +146,6 @@ main {
   white-space: nowrap;
   z-index: 1;
   display: inline-block;
-  color: #FF772C;
 }
 
 .text a:hover {
@@ -164,20 +163,25 @@ main {
 
 .footer {
   padding: 1.5rem 5vw 10vh;
-  text-align: center;
   max-width: var(--content-width);
   margin: 0 auto;
   line-height: 1.5em;
+  color: white;
+  background-color: #000065;
 }
 .footer a {
   display: inline-block;
-  font-size: .875rem;
+  color: #FF772C;
 }
+
+.footer a:hover {
+  color: #878787;
+  text-decoration: none;
+}
+
 .footer > a {
   margin-bottom: 1.5rem;
-  border-top: 2px solid #000;
   width: 16.5rem;
-  padding-top: .5rem;
 }
 
 .social a {
