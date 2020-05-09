@@ -13,48 +13,28 @@
 <?php snippet('header') ?>
 
 <main>
-    <?php snippet('intro') ?>
+  <?php snippet('intro') ?>
 
-  <div class="layout">
-
-    <aside>
-      <section>
-        <h2>Address</h2>
-        <div class="text">
-          <?= $page->address()->kt() ?>
-        </div>
-      </section>
-
-      <section>
-        <h2>Email</h2>
-        <div class="text">
-          <?= html::email($page->email()) ?>
-        </div>
-      </section>
-
-      <section>
-        <h2>Phone</h2>
-        <div class="text">
-          <?= html::tel($page->phone()) ?>
-        </div>
-      </section>
-
-      <section>
-        <h2>On the web</h2>
-        <div class="text">
-          <ul>
-            <?php foreach ($page->social()->toStructure() as $social): ?>
-            <li><?= html::a($social->url(), $social->platform()) ?></li>
-            <?php endforeach ?>
-          </ul>
-        </div>
-      </section>
-
-    </aside>
-
-    <div class="text">
-      <?= $page->text()->kt() ?>
+  <div class="text">
+    
+    <div class="contact">
+      <p><?= $site->author() ?></p>
+      <p>Toll free: <?= $page->phone() ?></p>
+      <p>Email: <?= $page->email() ?></p>
     </div>
+
+    <form action="./contact-us_files/mailer.php" method="post" enctype="multipart/form-data">
+      <label for="name">NAME: *</label><br>
+      <input type="text" id="name" name="name"/><br>
+      <label for="email">EMAIL ADDRESS: *</label><br>
+      <input type="email" id="email" name="email"/><br>
+      <label for="inquiry">HOW CAN WE HELP YOU?: *</label><br>
+      <input type="text" id="inquiry" name="inquiry"/><br><br>
+      <input type="reset">
+      <input type="submit" value="Submit"><br><br>
+    </form>
+
+    <?= $page->text()->kt() ?>
   </div>
 </main>
 
