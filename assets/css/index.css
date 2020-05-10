@@ -174,7 +174,6 @@ main {
   flex-direction: row;
   justify-content: space-between;
   padding: 1.5rem 5vw 1.5rem;
-  max-width: var(--content-width);
   margin: 0 auto;
   line-height: 1.5em;
   color: white;
