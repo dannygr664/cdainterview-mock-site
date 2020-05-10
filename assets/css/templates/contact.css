@@ -1,19 +1,51 @@
-.layout {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 3rem;
+form {
+  text-align: center;
 }
 
-@media screen and (min-width: 45rem) {
-  .layout {
-    grid-template-columns: 1fr 2fr;
-  }
+label {
+  margin: 0.5rem 0;
 }
 
-.layout aside section {
-  margin-bottom: 3rem;
+input {
+  background-color: #CCCCCC;
+  border: none;
+  padding: 0.5rem 0.5rem;
+  margin: 0.5rem 0;
+  width: 80%;
 }
 
-.layout aside h2 {
-  margin-bottom: .75rem;
+textarea {
+  background-color: #CCCCCC;
+  border: none;
+  padding: 0.5rem 0.5rem;
+  margin: 0.5rem 0;
+  width: 80%;
+  resize: none;
+  height: 8rem;
+}
+
+#reset-button {
+  background-color: #999999;
+  width: 5rem;
+  padding: 0.3rem 0.7rem;
+  margin: auto 0.3rem 2rem;
+  text-transform: uppercase;
+  color: #000065;
+}
+
+#reset-button:hover {
+  background-color: white;
+}
+
+#submit-button {
+  background-color: #999999;
+  width: 5rem;
+  padding: 0.3rem 0.7rem;
+  margin: auto 0.3rem 2rem;
+  text-transform: uppercase;
+  color: #000065;
+}
+
+#submit-button:hover {
+  background-color: white;
 }

@@ -22,18 +22,21 @@
       <p>Toll free: <?= $page->phone() ?></p>
       <p>Email: <?= $page->email() ?></p>
     </div>
+  </div>
+  
+  <form action="./contact-us_files/mailer.php" method="post" enctype="multipart/form-data" id="contact-form">
+    <label for="name">NAME: *</label><br>
+    <input type="text" id="name" name="name"/><br>
+    <label for="email">EMAIL ADDRESS: *</label><br>
+    <input type="email" id="email" name="email"/><br>
+    <label for="inquiry">HOW CAN WE HELP YOU?: *</label><br>
+    <textarea form="contact-form" id="inquiry">
+    </textarea><br><br>
+    <input type="reset" id="reset-button">
+    <input type="submit" value="Submit" id="submit-button"><br><br>
+  </form>
 
-    <form action="./contact-us_files/mailer.php" method="post" enctype="multipart/form-data">
-      <label for="name">NAME: *</label><br>
-      <input type="text" id="name" name="name"/><br>
-      <label for="email">EMAIL ADDRESS: *</label><br>
-      <input type="email" id="email" name="email"/><br>
-      <label for="inquiry">HOW CAN WE HELP YOU?: *</label><br>
-      <input type="text" id="inquiry" name="inquiry"/><br><br>
-      <input type="reset">
-      <input type="submit" value="Submit"><br><br>
-    </form>
-
+  <div class="text">
     <?= $page->text()->kt() ?>
   </div>
 </main>
