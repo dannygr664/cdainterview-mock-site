@@ -34,7 +34,7 @@ fields:
     type: toggle
     text: Turn on no-index for this page?
   email:
-    label: Email
+    label: Email (the contact form will link to this address)
     type: email
   phone:
     label: Phone
