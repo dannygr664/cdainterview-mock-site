@@ -16,5 +16,8 @@
   <?php endif ?>
 >
   <!-- The `or()` method is great to provide a fallback value if a field is empty -->
-  <h1><?= $page->heading() ?></h1>
+  <?php
+  if (!$page->heading()->isEmpty()): ?>
+    <h1><?= $page->heading() ?><hr/></h1>
+  <?php endif ?>
 </header> 
