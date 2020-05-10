@@ -12,6 +12,8 @@ Social:
   platform: Facebook
   url: >
     https://www.facebook.com/bemoacademicconsulting
+  icon: F
 - 
   platform: Twitter
   url: https://twitter.com/BeMo_AC
+  icon: L

@@ -17,7 +17,7 @@
     </p>
     <nav class="social">
       <?php foreach ($site->social()->toStructure() as $social): ?>
-      <a href="<?= $social->url() ?>"><?= $social->platform() ?></a>
+      <a href="<?= $social->url() ?>"><?= $social->icon() ?></a>
       <?php endforeach ?>
     </nav>
   </footer>

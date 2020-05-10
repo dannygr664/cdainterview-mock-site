@@ -2,6 +2,14 @@
   --content-width: 74rem;
 }
 
+@font-face {
+  font-family: "Socialico";
+  src: url(../fonts/socialico.woff) format("woff"),
+       url(../fonts/socialico.ttf) format("truetype"),
+       url(../fonts/socialico.svg) format("svg"),
+       url(../fonts/socialico.eot) format("embedded-opentype");
+}
+
 *,
 *:after,
 *:before{
@@ -162,7 +170,10 @@ main {
 }
 
 .footer {
-  padding: 1.5rem 5vw 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.5rem 5vw 1.5rem;
   max-width: var(--content-width);
   margin: 0 auto;
   line-height: 1.5em;
@@ -180,17 +191,13 @@ main {
 }
 
 .footer > a {
-  margin-bottom: 1.5rem;
   width: 16.5rem;
 }
 
 .social a {
-  margin: 0 .75rem;
-  padding: .5rem 1rem;
-  border: 2px solid #000;
-  width: 7.5rem;
-}
-.social a:hover {
-  background: #000;
-  color: #fff;
+  color: white;
+  font-family: "Socialico", sans-serif;
+  font-size: 1.75rem;
+  vertical-align: middle;
+  padding: 0 0.5rem;
 }
