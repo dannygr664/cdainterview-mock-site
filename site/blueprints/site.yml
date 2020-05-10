@@ -22,10 +22,10 @@ sections:
             type: url
             width: 1/2
       facebookpixel:
-        label: Facebook Pixel ID
+        label: Facebook Pixel Code Snippet
         type: text
       googleanalyticstag:
-        label: Google Analytics Tag
+        label: Google Analytics Tag Code Snippet
         type: text
 
   # The `pages` pages section shows other main pages of the site
