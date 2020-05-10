@@ -18,9 +18,9 @@
   <div class="text">
     
     <div class="contact">
-      <p><?= $site->author() ?></p>
-      <p>Toll free: <?= $page->phone() ?></p>
-      <p>Email: <?= $page->email() ?></p>
+      <p><b><?= $site->author() ?></b></p>
+      <p><b>Toll free</b>: <?= $page->phone() ?></p>
+      <p><b>Email</b>: <?= $page->email() ?></p>
     </div>
   </div>
   
