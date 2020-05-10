@@ -24,6 +24,9 @@ sections:
       facebookpixel:
         label: Facebook Pixel ID
         type: text
+      googleanalyticstag:
+        label: Google Analytics Tag
+        type: text
 
   # The `pages` pages section shows other main pages of the site
   # Using the `templates` option, we limit which types of pages are shown
