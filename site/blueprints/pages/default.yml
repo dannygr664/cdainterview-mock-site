@@ -23,12 +23,35 @@ status:
     text: The page is listed in the main menu
 
 # Limit subpage display to certain templates in a page preset
-pages:
-  template: default
+pages: false
 
 # A page preset can have a freely defined set of fields
 # List of all available field types: https://getkirby.com/docs/reference/panel/fields
 fields:
+  heading:
+    label: Heading
+    type: text
+  cover:
+    label: Cover Photo
+    type: files
+    multiple: false
+  noindex:
+    label: Toggle
+    type: toggle
+    text: Turn on no-index for this page?
   text:
-    type: textarea
+    type: markdown
     size: huge
+    buttons:
+      - headlines
+        - h1
+        - h2
+        - h3
+      - bold
+      - italic
+      - ul
+      - ol
+      - link
+      - strikethrough
+      - image
+      - file
