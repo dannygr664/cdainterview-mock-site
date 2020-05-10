@@ -25,11 +25,11 @@
   </div>
   
   <form action="./contact-us_files/mailer.php" method="post" enctype="multipart/form-data" id="contact-form">
-    <label for="name">NAME: *</label><br>
+    <label for="name">NAME: <abbr title="required">*</abbr></label><br>
     <input type="text" id="name" name="name"/><br>
-    <label for="email">EMAIL ADDRESS: *</label><br>
+    <label for="email">EMAIL ADDRESS: <abbr title="required">*<</abbr>/label><br>
     <input type="email" id="email" name="email"/><br>
-    <label for="inquiry">HOW CAN WE HELP YOU?: *</label><br>
+    <label for="inquiry">HOW CAN WE HELP YOU?: <abbr title="required">*</abbr></label><br>
     <textarea form="contact-form" id="inquiry">
     </textarea><br><br>
     <input type="reset" id="reset-button">
