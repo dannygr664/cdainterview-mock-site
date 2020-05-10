@@ -39,5 +39,19 @@ fields:
     type: toggle
     text: Turn on no-index for this page?
   text:
-    type: textarea
+    type: markdown
     size: huge
+    buttons:
+      - headlines
+        - h1
+        - h2
+        - h3
+      - bold
+      - italic
+      - ul
+      - ol
+      - link
+      - strikethrough
+      - image
+      - file
+
