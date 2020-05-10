@@ -19,7 +19,9 @@
   <?php endif ?>
 
   <!-- The title tag we show the title of the current page -->
-  <title><?= $page->title() ?></title>
+  <title><?= $page->metatitle() ?></title>
+
+  <meta name=”description” content="<?= $page->metadescription() ?>">
 
   <!-- Stylesheets can be included using the `css()` helper. Kirby also provides the `js()` helper to include script file. 
         More Kirby helpers: https://getkirby.com/docs/reference/templates/helpers -->
