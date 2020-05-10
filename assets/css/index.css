@@ -51,11 +51,9 @@ img {
 
 .header a {
   position: relative;
-  text-transform: uppercase;
-  font-size: .875rem;
+  font-size: 1rem;
   letter-spacing: .05em;
   padding: .5rem 0;
-  font-weight: 700;
 }
 
 .header .logo {
@@ -75,8 +73,13 @@ img {
   margin: 0 .75rem;
 }
 
+.menu a:hover {
+  border-bottom: 1px solid currentColor;
+}
+
 .menu a[aria-current] {
-  border-bottom: 2px solid #000;
+  color: #454990;
+  border-bottom: 1px solid currentColor;
 }
 
 @media screen and (min-width: 40rem) {
@@ -122,7 +125,7 @@ main {
   z-index: 1;
 }
 
-hr {
+.intro hr {
   display: block;
   width: 50rem;
   height: 2px;
