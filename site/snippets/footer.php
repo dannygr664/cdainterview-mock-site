@@ -17,7 +17,10 @@
     </p>
     <nav class="social">
       <?php foreach ($site->social()->toStructure() as $social): ?>
-      <a href="<?= $social->url() ?>"><?= $social->icon() ?></a>
+        <?php
+        if (!$social->icon()->isEmpty()): ?>
+          <a href="<?= $social->url() ?>"><?= $social->icon() ?></a>
+        <?php endif ?>
       <?php endforeach ?>
     </nav>
   </footer>
