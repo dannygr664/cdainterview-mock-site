@@ -21,6 +21,9 @@ sections:
             label: URL
             type: url
             width: 1/2
+      facebookpixel:
+        label: Facebook Pixel ID
+        type: text
 
   # The `pages` pages section shows other main pages of the site
   # Using the `templates` option, we limit which types of pages are shown
