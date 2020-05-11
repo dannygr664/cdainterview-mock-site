@@ -14,26 +14,46 @@
 
 <main>
   <?php snippet('intro') ?>
-
-  <div class="text">
-    
-    <div class="contact">
-      <p><b><?= $site->author() ?></b></p>
-      <p><b>Toll free</b>: <?= $page->phone() ?></p>
-      <p><b>Email</b>: <?= $page->email() ?></p>
-    </div>
-  </div>
   
-  <form action="./contact-us_files/mailer.php" method="post" enctype="multipart/form-data" id="contact-form">
-    <label for="name">NAME: <abbr title="required">*</abbr></label><br>
-    <input type="text" id="name" name="name"/><br>
-    <label for="email">EMAIL ADDRESS: <abbr title="required">*<</abbr>/label><br>
-    <input type="email" id="email" name="email"/><br>
-    <label for="inquiry">HOW CAN WE HELP YOU?: <abbr title="required">*</abbr></label><br>
-    <textarea form="contact-form" id="inquiry">
-    </textarea><br><br>
-    <input type="reset" id="reset-button">
-    <input type="submit" value="Submit" id="submit-button"><br><br>
+  <?php if($success): ?>
+    <div class="text">
+      <p id="success"><?= $success ?></p>
+    </div>
+  <?php else: ?>
+    <?php if (isset($alert['error'])): ?>
+      <div class="text"><p id="general-error"><?= $alert['error'] ?></p></div>
+    <?php else: ?>
+      <div class="text">
+        <div class="contact">
+          <p><b><?= $site->author() ?></b></p>
+          <p><b>Toll free</b>: <?= $page->phone() ?></p>
+          <p><b>Email</b>: <?= $page->email() ?></p>
+        </div>
+      </div>
+    <?php endif ?>
+  <?php endif ?>
+  
+  <form action="<?= $page->url() ?>" method="post">
+    <div class="honeypot">
+      <label for="website">WEBSITE *</label>
+      <input type="website" id="website" name="website">
+    </div>  
+    
+    <label for="name">NAME: *</label><br>
+    <input type="text" id="name" name="name" value="<?= $data['name'] ?? '' ?>" required/><br>
+    <?= isset($alert['name']) ? '<span class="alert-error">' . html($alert['name']) . '</span><br><br>' : '' ?>
+    
+    <label for="email">EMAIL ADDRESS: *</label><br>
+    <input type="email" id="email" name="email" value="<?= $data['email'] ?? '' ?>" required/><br>
+    <?= isset($alert['email']) ? '<span class="alert-error">' . html($alert['email']) . '</span><br><br>' : '' ?>
+    
+    <label for="inquiry">HOW CAN WE HELP YOU?: *</label><br>
+    <textarea name="text" id="text" required><?= $data['text'] ?? '' ?></textarea><br><br>
+    <?= isset($alert['text']) ? '<span class="alert-error">' . html($alert['text']) . '</span><br><br>' : '' ?>
+    
+    <input type="reset" name="reset" id="reset">
+    
+    <input type="submit" name="submit" value="Submit" id="submit"><br><br>
   </form>
 
   <div class="text">

@@ -24,7 +24,22 @@ textarea {
   height: 8rem;
 }
 
-#reset-button {
+#success {
+  color: #121F46;
+  font-weight: 500;
+}
+
+#general-error {
+  color: red;
+  font-weight: 500;
+}
+
+.alert-error {
+  color: red;
+  font-weight: 500;
+}
+
+#reset {
   background-color: #999999;
   width: 5rem;
   padding: 0.3rem 0.7rem;
@@ -33,11 +48,11 @@ textarea {
   color: #000065;
 }
 
-#reset-button:hover {
+#reset:hover {
   background-color: white;
 }
 
-#submit-button {
+#submit {
   background-color: #999999;
   width: 5rem;
   padding: 0.3rem 0.7rem;
@@ -46,6 +61,11 @@ textarea {
   color: #000065;
 }
 
-#submit-button:hover {
+#submit:hover {
   background-color: white;
+}
+
+.honeypot {
+  position: absolute;
+  left: -9999px;
 }
