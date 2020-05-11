@@ -31,8 +31,6 @@ a {
   text-decoration: none;
 }
 
-
-
 strong, b {
   font-weight: 600;
 }
@@ -127,12 +125,18 @@ main {
 
 .intro hr {
   display: block;
-  width: 50rem;
+  width: 20rem;
   height: 2px;
   border: 0;
   border-top: 2px solid white;
   margin: 1rem auto;
   padding: 0;
+}
+
+@media screen and (min-width: 40rem) {
+  .intro hr {
+    width: 50rem;
+  }
 }
 
 .tags {
@@ -146,7 +150,7 @@ main {
 .text {
   max-width: var(--content-width);
   line-height: 1.5em;
-  margin: 0 3rem;
+  margin: 0 1rem;
 }
 .text p,
 .text figure,
@@ -169,6 +173,7 @@ main {
   white-space: nowrap;
   z-index: 1;
   display: inline-block;
+  color: #FF772C;
 }
 
 .text a:hover {
@@ -184,6 +189,12 @@ main {
   width: 100%;
 }
 
+@media screen and (min-width: 40rem) {
+  .text {
+    margin: 0 3rem;
+  }
+}
+
 .footer {
   display: flex;
   flex-direction: row;
@@ -194,8 +205,9 @@ main {
   color: white;
   background-color: #000065;
 }
+
 .footer a {
-  display: inline-block;
+  display: block;
   color: #FF772C;
 }
 
@@ -204,14 +216,16 @@ main {
   text-decoration: none;
 }
 
-.footer > a {
-  width: 16.5rem;
-}
-
 .social a {
   color: white;
   font-family: "Socialico", sans-serif;
   font-size: 1.75rem;
   vertical-align: middle;
   padding: 0 0.5rem;
+}
+
+@media screen and (min-width: 40rem) {
+  .footer a {
+    display: inline-block;
+  }
 }
