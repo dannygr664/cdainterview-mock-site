@@ -9,4 +9,46 @@
  */
 return [
     'debug' => true,
+    'routes' => [
+        [
+          'pattern' => 'logout',
+          'action'  => function() {
+    
+            if ($user = kirby()->user()) {
+              $user->logout();
+            }
+    
+            go('login');
+    
+          }
+        ],
+        [
+          'pattern' => '/',
+          'action'  => function() {
+
+            if (!kirby()->user()) {
+              go('login');
+            } else {
+              $this->next();
+            }
+        
+          }
+        ],
+        [
+          'pattern' => '(:any)',
+          'action'  => function($any) {
+      
+            if ($any == 'login') {
+              return page('login');
+            }
+
+            if (!kirby()->user()) {
+              go('login');
+            } else {
+              $this->next();
+            }
+      
+          }
+        ]
+    ],
 ];
