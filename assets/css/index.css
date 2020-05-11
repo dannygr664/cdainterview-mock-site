@@ -1,5 +1,13 @@
 :root {
-  --content-width: 65rem;
+  --content-width: 74rem;
+}
+
+@font-face {
+  font-family: "Socialico";
+  src: url(../fonts/socialico.woff) format("woff"),
+       url(../fonts/socialico.ttf) format("truetype"),
+       url(../fonts/socialico.svg) format("svg"),
+       url(../fonts/socialico.eot) format("embedded-opentype");
 }
 
 *,
@@ -24,38 +32,33 @@ a {
 }
 
 strong, b {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 img {
   width: 100%;
 }
 
-.page {
-  padding: 5vh 5vw 10vh;
-}
 .page > * {
-  max-width: var(--content-width);
   margin: 0 auto;
 }
 
 .header {
-  margin-bottom: 1.5rem;
+  max-width: var(--content-width);
 }
 
 .header a {
   position: relative;
-  text-transform: uppercase;
-  font-size: .875rem;
+  font-size: 1rem;
   letter-spacing: .05em;
   padding: .5rem 0;
-  font-weight: 700;
 }
 
 .header .logo {
   display: block;
   margin-bottom: 1.5rem;
   padding: .5rem 0;
+  max-width: 40%;
 }
 
 .header {
@@ -68,17 +71,24 @@ img {
   margin: 0 .75rem;
 }
 
+.menu a:hover {
+  border-bottom: 1px solid currentColor;
+}
+
 .menu a[aria-current] {
-  border-bottom: 2px solid #000;
+  color: #454990;
+  border-bottom: 1px solid currentColor;
 }
 
 @media screen and (min-width: 40rem) {
   .header .logo {
     margin-bottom: 0;
+    max-width: 15%;
   }
   .header {
     flex-direction: row;
     justify-content: space-between;
+    max-width: var(--content-width);
   }
   .menu {
     margin-right: -.75rem;
@@ -92,15 +102,41 @@ main {
 
 .intro {
   padding: 10vh 0;
+  margin-bottom: 5rem;
   text-align: center;
+  height: 90vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .intro h1 {
-  position: relative;
-  margin-bottom: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  letter-spacing: 0.8rem;
   font-weight: 900;
   font-size: calc(1vw + 2rem);
   z-index: 1;
+}
+
+.intro hr {
+  display: block;
+  width: 20rem;
+  height: 2px;
+  border: 0;
+  border-top: 2px solid white;
+  margin: 1rem auto;
+  padding: 0;
+}
+
+@media screen and (min-width: 40rem) {
+  .intro hr {
+    width: 50rem;
+  }
 }
 
 .tags {
@@ -112,7 +148,9 @@ main {
 }
 
 .text {
+  max-width: var(--content-width);
   line-height: 1.5em;
+  margin: 0 1rem;
 }
 .text p,
 .text figure,
@@ -133,11 +171,16 @@ main {
 .text a {
   position: relative;
   white-space: nowrap;
-  font-weight: 500;
   z-index: 1;
   display: inline-block;
-  border-bottom: 2px solid #000;
+  color: #FF772C;
 }
+
+.text a:hover {
+  color: #878787;
+  text-decoration: none;
+}
+
 .text figure {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -146,31 +189,43 @@ main {
   width: 100%;
 }
 
+@media screen and (min-width: 40rem) {
+  .text {
+    margin: 0 3rem;
+  }
+}
+
 .footer {
-  padding: 1.5rem 5vw 10vh;
-  text-align: center;
-  max-width: var(--content-width);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.5rem 5vw 1.5rem;
   margin: 0 auto;
   line-height: 1.5em;
+  color: white;
+  background-color: #000065;
 }
+
 .footer a {
-  display: inline-block;
-  font-size: .875rem;
+  display: block;
+  color: #FF772C;
 }
-.footer > a {
-  margin-bottom: 1.5rem;
-  border-top: 2px solid #000;
-  width: 16.5rem;
-  padding-top: .5rem;
+
+.footer a:hover {
+  color: #878787;
+  text-decoration: none;
 }
 
 .social a {
-  margin: 0 .75rem;
-  padding: .5rem 1rem;
-  border: 2px solid #000;
-  width: 7.5rem;
+  color: white;
+  font-family: "Socialico", sans-serif;
+  font-size: 1.75rem;
+  vertical-align: middle;
+  padding: 0 0.5rem;
 }
-.social a:hover {
-  background: #000;
-  color: #fff;
+
+@media screen and (min-width: 40rem) {
+  .footer a {
+    display: inline-block;
+  }
 }

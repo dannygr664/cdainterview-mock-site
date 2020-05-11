@@ -8,6 +8,16 @@
  */
 ?>
 
-<header class="intro">
-  <h1><?= $page->title() ?></h1>
-</header>
+<header class="intro"
+<?php 
+  // we make sure to check if the file exists to prevent errors
+  if ($cover = $page->cover()->toFile()): ?>
+    style='background-image: url(<?= $cover->url() ?>)'
+  <?php endif ?>
+>
+  <!-- The `or()` method is great to provide a fallback value if a field is empty -->
+  <?php
+  if (!$page->heading()->isEmpty()): ?>
+    <h1><?= $page->heading() ?><hr/></h1>
+  <?php endif ?>
+</header> 
