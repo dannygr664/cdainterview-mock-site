@@ -1,82 +1,11 @@
-# Kirby Starterkit
+# CDA Interview Mock Site
 
-Kirby is a file-based CMS.
-Easy to setup. Easy to use. Flexible as hell.
+A mock website I built for a job application using a Kirby CMS, hosted locally via Laravel Valet, and shared using ngrok.
 
-## Trial
+## Running the site locally
 
-You can try Kirby on your local machine or on a test
-server as long as you need to make sure it is the right
-tool for your next project.
+First, make sure you have [Laravel Valet](https://laravel.com/docs/7.x/valet) installed. Clone this repo into your `park`ed directory (e.g. `~/Sites`). Now you can access this site on your machine at [http://cdainterview-mock-site.test](http://cdainterview-mock-site.test), and the panel at [http://cdainterview-mock-site.test/panel](http://cdainterview-mock-site.test/panel).
 
-## Buy a license
+## Sharing the site with others
 
-You can purchase your Kirby license at
-<https://getkirby.com/buy>
-
-A Kirby license is valid for a single domain. You can find
-Kirby's license agreement here: <https://getkirby.com/license>
-
-## The Starterkit
-
-Kirby's Starterkit comes with a small demo website and a fully
-configured panel. Feel free to modify it and play with it as
-much as you like.
-
-## The Panel
-
-You can find the login for Kirby's admin interface at
-http://yourdomain.com/panel. You will be guided through the signup
-process for your first user, when you visit the panel
-for the first time.
-
-## Installation
-
-Kirby does not require a database, which makes it very easy to
-install. Just copy Kirby's files to your server and visit the
-URL for your website in the browser.
-
-**Please check if the invisible .htaccess file has been
-copied to your server correctly**
-
-### Requirements
-
-Kirby runs on PHP 7.1+, Apache or Nginx.
-
-### Download
-
-You can download the latest version of the Starterkit
-from https://download.getkirby.com
-
-### With Git
-
-If you are familiar with Git, you can clone Kirby's
-Starterkit repository from Github.
-
-    git clone https://github.com/getkirby/starterkit.git
-
-## Documentation
-
-<https://getkirby.com/docs>
-
-## Issues
-
-If you have a Github account, please report issues
-directly on Github: <https://github.com/getkirby/kirby/issues>
-
-Otherwise you can use Kirby's forum: https://forum.getkirby.com
-or send us an email: <support@getkirby.com>
-
-## Ideas & Feature Requests
-
-If you have ideas for new features, please submit a ticket in our ideas repository:
-<https://github.com/getkirby/kirby/ideas>
-
-## Support
-
-<https://getkirby.com/support>
-
-## Copyright
-
-© 2009-2019 Bastian Allgeier (Bastian Allgeier GmbH)
-<https://getkirby.com>
+To share your local site via an [ngrok](https://ngrok.com/docs) tunnel, run: `valet share`. This will output a shareable link that is active until you close you tunnel.
